@@ -419,7 +419,7 @@ header {
 
     nav {
         margin-bottom: 56px;
-        @include adaptiveValue(margin-bottom, 62px, 32px, 676px, 375px);
+        @include adaptiveValue(margin-bottom, 62px, 42px, 676px, 375px);
 
         .header__logo {
             padding: 20px;

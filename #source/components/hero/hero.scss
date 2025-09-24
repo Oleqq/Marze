@@ -1,0 +1,254 @@
+.hero {
+
+    padding-top: 50px;
+    @include adaptiveValue(padding-top, 50px, 10px, 1920px,375px);
+
+    &__container {
+
+    }
+    &__wrapper {
+        display: flex;
+        gap: 28px;
+        @include adaptiveValue(gap, 28px, 1px, 1920px, 467px);
+
+        @media (max-width:991px) {
+            flex-direction: column;
+        }
+        @media (max-width:567px) {
+            gap: 0;
+        }
+    }
+    
+
+    &-left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        @include adaptiveValue(gap, 28px, 1px, 1920px, 467px);
+
+        @media (max-width:991px) {
+            width: 100%;
+        }
+
+        @media (max-width:567px) {
+            gap: 10px;
+        }
+
+        &-top {
+
+            &__title {
+
+                svg {
+                    display: flex;
+                    width: 100%;
+                }
+
+                .logo-mobile {
+                    display: none;
+                }
+                @media (max-width:567px) {
+                    .logo-mobile {
+                        display: flex;
+                    }
+                    .logo-desktop {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            gap: 28px;
+            @include adaptiveValue(gap, 28px, 1px, 1920px, 467px);
+
+            height: 100%;
+
+            @media (max-width:567px) {
+                flex-direction: column;
+                gap: 0px;
+            }
+
+            &__img {
+                display: flex;
+                width: 100%;
+                max-width: 50%;
+
+                @media (max-width:567px) {
+                    max-width: 100%;
+                }
+
+                img {
+                    display: flex;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-badges {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 28px;
+                @include adaptiveValue(gap, 28px, 1px, 1920px, 467px);
+
+                width: 100%;
+                
+                @media (max-width:567px) {
+                    flex-direction: column-reverse;
+                    gap: 0px;
+                }
+
+                &__badge {
+
+                    &-sm {
+                        @include adaptiveValue(padding-top, 28px, 16px, 1920px, 467px);
+                        @include adaptiveValue(padding-right, 42px, 8px, 1920px, 467px);
+                        @include adaptiveValue(padding-left, 42px, 8px, 1920px, 467px);
+                        @include adaptiveValue(padding-bottom, 28px, 16px, 1920px, 467px);
+
+                        display: flex;
+                        gap: 16px;
+                        @include adaptiveValue(gap, 16px, 12px, 1920px, 467px);
+                        border: 1px solid #cacaca;
+
+                        svg {
+                            display: flex;
+                            width: 42px;
+                            height: 42px;
+                        }
+                    }
+
+                    &-md {
+                        background-color: #323232;
+                        position: relative;
+
+                        padding: 42px;
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+
+                        height: 100%;
+
+                        @include adaptiveValue(padding-top, 42px, 8px, 1920px, 467px);
+                        @include adaptiveValue(padding-right, 42px, 8px, 1920px, 467px);
+                        @include adaptiveValue(padding-left, 42px, 8px, 1920px, 467px);
+                        @include adaptiveValue(padding-bottom, 42px, 8px, 1920px, 467px);
+
+
+                        p {
+                            color: #fff;
+                            z-index: 10;
+                        }
+
+                        .next-btn {
+                            z-index: 11;
+
+                            border: 1px solid #fff;
+                            padding: 14px 28px;
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            border-radius: 70px;
+
+                            width: fit-content;
+                        }
+
+                        img {
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+
+                            width: 130px;
+                            height: 202px;
+
+                            display: flex;
+                           
+
+                            object-fit: cover;
+
+                            z-index: 5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        @include adaptiveValue(gap, 28px, 1px, 1920px, 467px);
+
+        @media (max-width:991px) {
+            width: 100%;
+        }
+        @media (max-width:567px) {
+            gap: 0px;
+        }
+
+        &__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+                @media (max-width:991px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 18px;
+                    border: 1px solid #cacaca;
+                    
+
+                    padding: 18px 8px;
+                }
+                @media (max-width:567px) {
+                    border-top: none;
+                }
+        }
+
+
+        &__product-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            &__img {
+                display: flex;
+                height: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                padding: 26px 42px;
+                border: 1px solid #cacaca;
+
+                @include adaptiveValue(padding-top, 26px, 12px, 1920px, 467px);
+                @include adaptiveValue(padding-right, 42px, 8px, 1920px, 467px);
+                @include adaptiveValue(padding-left, 42px, 8px, 1920px, 467px);
+                @include adaptiveValue(padding-bottom, 26px, 12px, 1920px, 467px);
+
+                @media (max-width:567px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 18px;
+                }
+            }
+        }
+    }
+    
+
+}
