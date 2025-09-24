@@ -3,6 +3,13 @@
     padding-top: 50px;
     @include adaptiveValue(padding-top, 50px, 10px, 1920px,375px);
 
+    padding-bottom: 40px;
+    @include adaptiveValue(padding-bottom, 40px, 1px, 1920px,467px);
+
+    @media (max-width:767px) {
+        padding-bottom: 0;
+    }
+
     &__container {
 
     }

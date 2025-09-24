@@ -1,0 +1,75 @@
+.video-section {
+
+    padding-bottom: 54px;
+
+    &__container {
+
+    }
+    &__wrapper {
+        display: flex;
+        // gap: 28px;
+        // @include adaptiveValue(gap, 28px, 1px, 1920px, 467px);
+        // @media (max-width:567px) {
+        //     gap: 0;
+        // }
+
+        @media (max-width:767px) {
+            flex-direction: column;
+        }
+
+    }
+    &__video {
+        display: flex;
+        width: 50%;
+
+        @media (max-width:767px) {
+            width: 100%;
+        }
+
+        img {
+            display: flex;
+            width: 100%;
+            object-fit: cover;
+        }
+        video {
+            display: flex;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        padding: 42px;
+        @include adaptiveValue(padding-top, 42px, 24px, 1920px, 467px);
+        @include adaptiveValue(padding-right, 42px, 8px, 1920px, 467px);
+        @include adaptiveValue(padding-left, 42px, 8px, 1920px, 467px);
+        @include adaptiveValue(padding-bottom, 42px, 24px, 1920px, 467px);
+
+        border: 1px solid #cacaca;
+
+        @media (max-width:767px) {
+            width: 100%;
+        }
+
+
+
+        h2 {
+            margin-bottom: 32px;
+            @include adaptiveValue(margin-bottom, 32px, 18px, 1920px, 375px);
+        }
+
+        p {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            @include adaptiveValue(font-size, 14px, 12px, 1920px, 375px);
+            line-height: 129%;
+            color: #000;
+            margin-bottom: 16px;
+            @include adaptiveValue(margin-bottom, 16px, 10px, 1920px, 467px);
+        }
+    }
+}
