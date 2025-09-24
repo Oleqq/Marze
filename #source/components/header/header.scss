@@ -56,6 +56,22 @@ header {
         }
     }
 
+    &.sticky {
+        .header__bottom {
+            @media (min-width:678px) {
+                transition: .2s ease;
+                opacity: 1;
+                height: 24px;
+            }
+        }
+        .header__top {
+           @media (min-width:678px) {
+                @include adaptiveValue(margin-bottom, 40px, 18px, 1920px, 467px);
+                transition: .2s ease;
+           }
+        }
+    }
+
 
     &__container {
 
