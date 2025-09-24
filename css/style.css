@@ -1888,6 +1888,299 @@ header {
   }
 }
 
+.price-section p {
+  font-weight: 400;
+}
+.price-section span {
+  font-weight: 600;
+}
+.price-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cacaca;
+  border-bottom: 0;
+}
+.price-section__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 1920px) {
+  .price-section__top {
+    padding-top: 50px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (padding-top: clamp(1.5pxrem, calc(15.6434962147px + 1.7894012388 * 1vw), 3.125pxrem)) {
+    .price-section__top {
+      padding-top: clamp(1.5pxrem, calc(15.6434962147px + 1.7894012388 * 1vw), 3.125pxrem);
+    }
+  }
+  @supports not (padding-top: clamp(1.5pxrem, calc(15.6434962147px + 1.7894012388 * 1vw), 3.125pxrem)) {
+    .price-section__top {
+      padding-top: calc(24px + (100vw - 467px) * 0.0178940124);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .price-section__top {
+    padding-top: 24px;
+  }
+}
+@media (min-width: 1920px) {
+  .price-section__top {
+    padding-right: 50px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (padding-right: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem)) {
+    .price-section__top {
+      padding-right: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem);
+    }
+  }
+  @supports not (padding-right: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem)) {
+    .price-section__top {
+      padding-right: calc(8px + (100vw - 467px) * 0.0289057123);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .price-section__top {
+    padding-right: 8px;
+  }
+}
+@media (min-width: 1920px) {
+  .price-section__top {
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (padding-bottom: clamp(1.5pxrem, calc(15.6434962147px + 1.7894012388 * 1vw), 3.125pxrem)) {
+    .price-section__top {
+      padding-bottom: clamp(1.5pxrem, calc(15.6434962147px + 1.7894012388 * 1vw), 3.125pxrem);
+    }
+  }
+  @supports not (padding-bottom: clamp(1.5pxrem, calc(15.6434962147px + 1.7894012388 * 1vw), 3.125pxrem)) {
+    .price-section__top {
+      padding-bottom: calc(24px + (100vw - 467px) * 0.0178940124);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .price-section__top {
+    padding-bottom: 24px;
+  }
+}
+@media (min-width: 1920px) {
+  .price-section__top {
+    padding-left: 50px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (padding-left: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem)) {
+    .price-section__top {
+      padding-left: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem);
+    }
+  }
+  @supports not (padding-left: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem)) {
+    .price-section__top {
+      padding-left: calc(8px + (100vw - 467px) * 0.0289057123);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .price-section__top {
+    padding-left: 8px;
+  }
+}
+@media (max-width: 767px) {
+  .price-section__top {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+@media (max-width: 567px) {
+  .price-section__top h3 {
+    font-weight: 500;
+  }
+}
+.price-section__bottom {
+  display: flex;
+  padding: 0 50px 50px 50px;
+}
+@media (min-width: 1920px) {
+  .price-section__bottom {
+    padding-right: 50px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (padding-right: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem)) {
+    .price-section__bottom {
+      padding-right: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem);
+    }
+  }
+  @supports not (padding-right: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem)) {
+    .price-section__bottom {
+      padding-right: calc(8px + (100vw - 467px) * 0.0289057123);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .price-section__bottom {
+    padding-right: 8px;
+  }
+}
+@media (min-width: 1920px) {
+  .price-section__bottom {
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (padding-bottom: clamp(1.5pxrem, calc(15.6434962147px + 1.7894012388 * 1vw), 3.125pxrem)) {
+    .price-section__bottom {
+      padding-bottom: clamp(1.5pxrem, calc(15.6434962147px + 1.7894012388 * 1vw), 3.125pxrem);
+    }
+  }
+  @supports not (padding-bottom: clamp(1.5pxrem, calc(15.6434962147px + 1.7894012388 * 1vw), 3.125pxrem)) {
+    .price-section__bottom {
+      padding-bottom: calc(24px + (100vw - 467px) * 0.0178940124);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .price-section__bottom {
+    padding-bottom: 24px;
+  }
+}
+@media (min-width: 1920px) {
+  .price-section__bottom {
+    padding-left: 50px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (padding-left: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem)) {
+    .price-section__bottom {
+      padding-left: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem);
+    }
+  }
+  @supports not (padding-left: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem)) {
+    .price-section__bottom {
+      padding-left: calc(8px + (100vw - 467px) * 0.0289057123);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .price-section__bottom {
+    padding-left: 8px;
+  }
+}
+.price-section__bottom .prices__grid {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 32px;
+}
+@media (min-width: 1920px) {
+  .price-section__bottom .prices__grid {
+    gap: 32px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (gap: clamp(1pxrem, calc(10.8575361321px + 1.1011699931 * 1vw), 2pxrem)) {
+    .price-section__bottom .prices__grid {
+      gap: clamp(1pxrem, calc(10.8575361321px + 1.1011699931 * 1vw), 2pxrem);
+    }
+  }
+  @supports not (gap: clamp(1pxrem, calc(10.8575361321px + 1.1011699931 * 1vw), 2pxrem)) {
+    .price-section__bottom .prices__grid {
+      gap: calc(16px + (100vw - 467px) * 0.0110116999);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .price-section__bottom .prices__grid {
+    gap: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .price-section__bottom .prices__grid {
+    flex-direction: column;
+  }
+}
+.price-section__bottom .prices__item {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.price-section__bottom .prices__item-img {
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+}
+.price-section__bottom .prices__item-img img {
+  display: flex;
+  width: 100%;
+}
+.price-section__bottom .prices__item-content {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1370px) {
+  .price-section__bottom .prices__item-content {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+  }
+}
+.price-section__bottom .prices__item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.price-section__bottom .shopcart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid #000;
+  border-radius: 70px;
+  background-color: #323232;
+  cursor: pointer;
+  transition: 0.5s ease;
+  width: fit-content;
+}
+@media (max-width: 991px) {
+  .price-section__bottom .shopcart {
+    padding: 4px 8px;
+  }
+}
+.price-section__bottom .shopcart .socials__logo {
+  display: flex;
+}
+.price-section__bottom .shopcart .socials__logo svg {
+  transition: 0.2s ease;
+}
+.price-section__bottom .shopcart .socials__logo svg path {
+  transition: 0.2s ease;
+}
+.price-section__bottom .shopcart:hover {
+  transition: 0.2s ease;
+  border-color: #FF7700;
+  background-color: #FF7700;
+  filter: drop-shadow(1px 1px 10px rgba(255, 119, 0, 0.4666666667));
+}
+.price-section__bottom .shopcart:hover .socials__logo {
+  transition: 0.2s ease;
+}
+.price-section__bottom .shopcart:hover .socials__logo svg {
+  transition: 0.2s ease;
+}
+.price-section__bottom .shopcart:hover .socials__logo svg path {
+  transition: 0.2s ease;
+  fill: #fff;
+}
+
 .about-company__wrapper {
   display: flex;
   flex-direction: column;

@@ -145,17 +145,17 @@ header {
         @include adaptiveValue(gap, 20px, 8px, 1920px, 867px);
 
         .shopcart {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 8px 16px;
-        border: 1px solid #000;
-        border-radius: 70px;
-        background-color: #323232;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 16px;
+            border: 1px solid #000;
+            border-radius: 70px;
+            background-color: #323232;
 
-        cursor: pointer;
+            cursor: pointer;
 
-        transition: .5s ease;
+            transition: .5s ease;
 
         @media (max-width:991px) {
             padding: 4px 8px;
@@ -192,7 +192,8 @@ header {
                 }
             }
         }
-    }
+        }
+        
         .shopcart__sum {
             font-family: var(--font-family);
             font-weight: 400;
