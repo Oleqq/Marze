@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* GLOBAL STYLES */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 *, *:before, *:after {
@@ -332,8 +333,35 @@ header {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  background: white;
+}
+
+.header.sticky {
+  transform: translateY(0);
+}
+
+.main-content {
+  padding-top: 0;
+  transition: padding-top 0.3s ease-in-out;
+}
+
+/* Когда шапка sticky, добавляем отступ для основного контента */
+.header.sticky + .main-content {
+  padding-top: 82px;
+}
+
+.header {
   padding-top: 40px;
   padding-bottom: 24px;
+  background-color: #fff;
+  box-shadow: 0.5px 0.5px 20px rgba(202, 202, 202, 0.4666666667);
+  transition: 0.2s ease;
 }
 @media (min-width: 1920px) {
   .header {
@@ -379,11 +407,25 @@ header {
     padding-bottom: 12px;
   }
 }
+@media (min-width: 678px) {
+  .header.active .header__bottom {
+    transition: 0.2s ease;
+    opacity: 0;
+    height: 1px;
+  }
+}
+@media (min-width: 678px) {
+  .header.active .header__top {
+    margin-bottom: 8px;
+    transition: 0.2s ease;
+  }
+}
 .header__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+  transition: 0.2s ease;
 }
 @media (min-width: 1920px) {
   .header__top {
@@ -405,6 +447,11 @@ header {
 @media (max-width: 467px) {
   .header__top {
     margin-bottom: 18px;
+  }
+}
+@media (max-width: 467px) {
+  .header__top {
+    margin-bottom: 12px;
   }
 }
 .header .burger-menu {
@@ -638,6 +685,10 @@ header {
   .header__cart .shopcart__sum {
     font-size: 10px;
   }
+}
+.header__bottom {
+  transition: 0.2s ease;
+  height: 24px;
 }
 @media (max-width: 676px) {
   .header__bottom {

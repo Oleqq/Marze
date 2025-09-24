@@ -45,6 +45,57 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// sticky header
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector('.header');
+    const mainContent = document.querySelector('.main');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    // Вычисляем высоту шапки
+    const headerHeight = header.offsetHeight;
+    
+    // Устанавливаем начальный отступ для контента
+    mainContent.style.paddingTop = `${headerHeight}px`;
+
+    function updateHeader() {
+        const currentScrollY = window.scrollY;
+
+        // Логика для sticky header
+        if (currentScrollY > 300) {
+            if (currentScrollY < lastScrollY) {
+                // Скроллим вверх - показываем шапку
+                header.classList.add('sticky');
+            } else {
+                // Скроллим вниз - скрываем шапку
+                header.classList.remove('sticky');
+            }
+        } else {
+            // Вверху страницы - скрываем шапку
+            header.classList.remove('sticky');
+        }
+
+        // Логика для active класса (когда проскроллили высоту шапки)
+        if (currentScrollY > headerHeight) {
+            header.classList.add('active');
+        } else {
+            header.classList.remove('active');
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+    }
+
+    function onScroll() {
+        if (!ticking) {
+            requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', onScroll);
+});
+
 
 
 
@@ -60,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, {
         root: null, 
         rootMargin: '0px', 
-        threshold: 0.4 
+        threshold: 0.01
     });
   
     const sections = document.querySelectorAll('section');

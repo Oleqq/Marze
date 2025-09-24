@@ -3,11 +3,59 @@ header {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+//   transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  background: white;
+
+}
+
+.header.sticky {
+  transform: translateY(0);
+}
+
+.main-content {
+  padding-top: 0; 
+  transition: padding-top 0.3s ease-in-out;
+}
+
+/* Когда шапка sticky, добавляем отступ для основного контента */
+.header.sticky + .main-content {
+  padding-top: 82px; 
+}
+
+.header {
     padding-top: 40px;
     @include adaptiveValue(padding-top, 40px, 24px, 1920px, 467px);
 
     padding-bottom: 24px;
     @include adaptiveValue(padding-bottom, 24px, 12px, 1920px, 467px);
+
+    background-color: #fff;
+    box-shadow: .5px .5px 20px #cacaca77;
+    transition: .2s ease;
+
+    
+    &.active {
+        .header__bottom {
+            @media (min-width:678px) {
+                transition: .2s ease;
+                opacity: 0;
+                height: 1px;
+            }
+        }
+        .header__top {
+           @media (min-width:678px) {
+                margin-bottom: 8px;
+                transition: .2s ease;
+           }
+        }
+    }
+
 
     &__container {
 
@@ -23,6 +71,12 @@ header {
         align-items: center;
         margin-bottom: 40px;
         @include adaptiveValue(margin-bottom, 40px, 18px, 1920px, 467px);
+
+        transition: .2s ease;
+
+        @media (max-width:467px) {
+            margin-bottom: 12px;
+        }
     }
     // burger
     .burger-menu {
@@ -210,6 +264,8 @@ header {
 
     // header bottom
     &__bottom {
+        transition: .2s ease;
+        height: 24px;
 
         @media (max-width:676px) {
             display: none;
