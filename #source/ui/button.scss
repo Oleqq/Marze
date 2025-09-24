@@ -1,0 +1,118 @@
+// Базовые стили для кнопки
+.ui-button {
+  &__primary, &__secondary {
+    display: flex;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    width: fit-content;
+    height: 100%;
+
+    a {
+      display: flex;
+      position: relative;
+      width: fit-content;
+      height: 100%;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .button {
+      &-text {
+        position: absolute;
+        left: 54px;
+        top: 14px;
+      }
+
+      &-arrow {
+        transition: .1s ease;
+      }
+    }
+
+    &:hover .button-arrow {
+      transition: .1s ease;
+    }
+
+    &:active .button-arrow,
+    &:focus-within .button-arrow {
+      transform: scale(1.05);
+    }
+  }
+
+  // Primary стили
+  &__primary {
+    color: #fff;
+
+    a { color: #fff; }
+
+    .button {
+      &-shape {
+        &-transparent {
+          opacity: 0;
+          transition: .2s ease;
+          display: none;
+        }
+        &-orange {
+          opacity: 1;
+          transition: .2s ease;
+          display: block;
+        }
+      }
+    }
+
+    &:hover {
+      a { color: #f70; }
+
+      .button-shape {
+        &-transparent {
+          opacity: 1;
+          display: block;
+        }
+        &-orange {
+          opacity: 0;
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Secondary стили
+  &__secondary {
+    color: #fff;
+
+    a { color: #f70; }
+
+    .button {
+      &-shape {
+        &-transparent {
+          opacity: 1;
+          transition: .2s ease;
+          display: block;
+        }
+        &-orange {
+          opacity: 0;
+          transition: .2s ease;
+          display: none;
+        }
+      }
+    }
+
+    &:hover {
+      a { color: #fff; }
+
+      .button-shape {
+        &-transparent {
+          opacity: 0;
+          display: none;
+        }
+        &-orange {
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+  }
+}

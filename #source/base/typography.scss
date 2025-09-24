@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font-family: Montserrat;
+}
+
+.section {
+
+    &__title {
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    @include adaptiveValue(font-size, 48px, 20px, 1920px, 375px);
+    line-height: 81%;
+    color: #000;
+
+
+        &-secondary {
+            font-family: var(--font-family);
+            font-weight: 700;
+            @include adaptiveValue(font-size, 40px, 20px, 1920px, 375px);
+            line-height: 81%;
+            color: #000;
+        }
+    }
+
+    
+}
+
+.paragraph {
+
+    &__title {
+        font-family: var(--font-family);
+        font-weight: 500;
+        @include adaptiveValue(font-size, 24px, 20px, 1920px, 375px);
+        line-height: 100%;
+        color: #000;    
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+        font-weight: 500;
+        @include adaptiveValue(font-size, 16px, 14px, 1920px, 375px);
+        line-height: 100%;
+        color: #000;
+
+        &-secondary {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            @include adaptiveValue(font-size, 14px, 12px, 1920px, 375px);
+            line-height: 129%;
+            color: #000;
+        }
+    }
+
+}
