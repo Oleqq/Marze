@@ -1,0 +1,71 @@
+.catalog-banner-2 {
+    
+    &__container {
+        
+    }
+    &__wrapper {
+        border: 1px solid #cacaca;
+        border-bottom: none;
+
+        display: flex;
+        max-height: 330px;
+
+        @media (max-width:676px) {
+            max-height: 100%;
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        @include adaptiveValue(padding-top, 54px, 12px, 1920px, 467px);
+        @include adaptiveValue(padding-right, 50px, 8px, 1920px, 467px);
+        @include adaptiveValue(padding-left, 50px, 8px, 1920px, 467px);
+        @include adaptiveValue(padding-bottom, 54px, 12px, 1920px, 467px);
+
+        @media (max-width:676px) {
+            width: 100%;
+            padding-top: 42px;
+            padding-bottom: 32px;
+        }
+
+        h3 {
+            margin-bottom: 24px;
+
+            @media (max-width:676px) {
+                font-weight: 500;
+                line-height: 100%;
+            }
+        }
+        p {
+            margin-bottom: 28px;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            @include adaptiveValue(font-size, 16px, 14px, 1920px, 467px);
+        }
+
+        .ui-button__primary {
+            height: fit-content;
+        }
+    }
+    &__img {
+        display: flex;
+        width: 50%;
+        @media (max-width:676px) {
+            width: 100%;
+        }
+
+            img {
+                display: flex;
+                width: 100%;
+                object-fit: cover;
+            }
+    }
+}

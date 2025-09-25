@@ -2412,6 +2412,174 @@ header {
   }
 }
 
+.catalog-banner-2__wrapper {
+  border: 1px solid #cacaca;
+  border-bottom: none;
+  display: flex;
+  max-height: 330px;
+}
+@media (max-width: 676px) {
+  .catalog-banner-2__wrapper {
+    max-height: 100%;
+    flex-direction: column;
+  }
+}
+.catalog-banner-2__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+@media (min-width: 1920px) {
+  .catalog-banner-2__text {
+    padding-top: 54px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (padding-top: clamp(0.75pxrem, calc(-1.4989676531px + 2.8905712319 * 1vw), 3.375pxrem)) {
+    .catalog-banner-2__text {
+      padding-top: clamp(0.75pxrem, calc(-1.4989676531px + 2.8905712319 * 1vw), 3.375pxrem);
+    }
+  }
+  @supports not (padding-top: clamp(0.75pxrem, calc(-1.4989676531px + 2.8905712319 * 1vw), 3.375pxrem)) {
+    .catalog-banner-2__text {
+      padding-top: calc(12px + (100vw - 467px) * 0.0289057123);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .catalog-banner-2__text {
+    padding-top: 12px;
+  }
+}
+@media (min-width: 1920px) {
+  .catalog-banner-2__text {
+    padding-right: 50px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (padding-right: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem)) {
+    .catalog-banner-2__text {
+      padding-right: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem);
+    }
+  }
+  @supports not (padding-right: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem)) {
+    .catalog-banner-2__text {
+      padding-right: calc(8px + (100vw - 467px) * 0.0289057123);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .catalog-banner-2__text {
+    padding-right: 8px;
+  }
+}
+@media (min-width: 1920px) {
+  .catalog-banner-2__text {
+    padding-left: 50px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (padding-left: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem)) {
+    .catalog-banner-2__text {
+      padding-left: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem);
+    }
+  }
+  @supports not (padding-left: clamp(0.5pxrem, calc(-5.4989676531px + 2.8905712319 * 1vw), 3.125pxrem)) {
+    .catalog-banner-2__text {
+      padding-left: calc(8px + (100vw - 467px) * 0.0289057123);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .catalog-banner-2__text {
+    padding-left: 8px;
+  }
+}
+@media (min-width: 1920px) {
+  .catalog-banner-2__text {
+    padding-bottom: 54px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (padding-bottom: clamp(0.75pxrem, calc(-1.4989676531px + 2.8905712319 * 1vw), 3.375pxrem)) {
+    .catalog-banner-2__text {
+      padding-bottom: clamp(0.75pxrem, calc(-1.4989676531px + 2.8905712319 * 1vw), 3.375pxrem);
+    }
+  }
+  @supports not (padding-bottom: clamp(0.75pxrem, calc(-1.4989676531px + 2.8905712319 * 1vw), 3.375pxrem)) {
+    .catalog-banner-2__text {
+      padding-bottom: calc(12px + (100vw - 467px) * 0.0289057123);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .catalog-banner-2__text {
+    padding-bottom: 12px;
+  }
+}
+@media (max-width: 676px) {
+  .catalog-banner-2__text {
+    width: 100%;
+    padding-top: 42px;
+    padding-bottom: 32px;
+  }
+}
+.catalog-banner-2__text h3 {
+  margin-bottom: 24px;
+}
+@media (max-width: 676px) {
+  .catalog-banner-2__text h3 {
+    font-weight: 500;
+    line-height: 100%;
+  }
+}
+.catalog-banner-2__text p {
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (min-width: 1920px) {
+  .catalog-banner-2__text p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 467px) and (max-width: 1920px) {
+  @supports (font-size: clamp(0.875pxrem, calc(13.3571920165px + 0.1376462491 * 1vw), 1pxrem)) {
+    .catalog-banner-2__text p {
+      font-size: clamp(0.875pxrem, calc(13.3571920165px + 0.1376462491 * 1vw), 1pxrem);
+    }
+  }
+  @supports not (font-size: clamp(0.875pxrem, calc(13.3571920165px + 0.1376462491 * 1vw), 1pxrem)) {
+    .catalog-banner-2__text p {
+      font-size: calc(14px + (100vw - 467px) * 0.0013764625);
+    }
+  }
+}
+@media (max-width: 467px) {
+  .catalog-banner-2__text p {
+    font-size: 14px;
+  }
+}
+.catalog-banner-2__text .ui-button__primary {
+  height: fit-content;
+}
+.catalog-banner-2__img {
+  display: flex;
+  width: 50%;
+}
+@media (max-width: 676px) {
+  .catalog-banner-2__img {
+    width: 100%;
+  }
+}
+.catalog-banner-2__img img {
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+}
+
 .price-section p {
   font-weight: 400;
 }
