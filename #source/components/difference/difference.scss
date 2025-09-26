@@ -75,6 +75,7 @@
         display: flex;
         gap: 62px;
         @include adaptiveValue(gap, 62px, 16px, 1920px, 991px);
+        justify-content: space-between;
 
         @media (max-width:1200px) {
             justify-content: space-between;
@@ -84,7 +85,7 @@
         }
     }
     &__list {
-        max-width: 280px;
+        max-width: 300px;
 
         @media (max-width:1200px) {
             max-width: 100%;
