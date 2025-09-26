@@ -1,8 +1,6 @@
 .highlight {
 
-    @media (max-width:991px) {
-        display: none;
-    }
+  
 
     &__top {
         display: flex;
@@ -17,8 +15,17 @@
         border: 1px solid #cacaca;
         border-bottom: none;
 
+        @media (max-width:991px) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
         h2 {
             max-width: 790px;
+
+            @media (max-width:991px) {
+                font-weight: 500;
+            }
         }
 
         p {
@@ -51,21 +58,52 @@
             align-items: center;
             border: 1px solid #cacaca;
             overflow: hidden;
-            
+
+            position: relative;
+
+            max-height: 250px;
+            @include adaptiveValue(max-height, 250px, 400px, 1920px, 467px);
+            @include adaptiveValue(height, 250px, 400px, 1920px, 467px);
+
             @include adaptiveValue(padding-right, 32px, 8px, 1920px, 467px);
-            @include adaptiveValue(padding-left, 50px, 8px, 1920px, 467px);
+            @include adaptiveValue(padding-left, 32px, 8px, 1920px, 467px);
 
             @media (max-width:991px) {
                 width: 100% !important;
+                height: 100%;
+                justify-content: flex-start;
+
+                padding: 30px;
             }
 
             &.img {
                 padding: 0;
+                
+                @media (max-width:991px) {
+                   
+                }
+                
 
                 p {
                     @include adaptiveValue(padding-right, 32px, 8px, 1920px, 467px);
                     @include adaptiveValue(padding-left, 50px, 8px, 1920px, 467px);
                 }
+            }
+
+            &.black {
+                background-color: #323232;
+
+                p {
+                    color: #fff;
+                }
+            }
+
+
+            img {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
             p {
@@ -76,8 +114,42 @@
                 justify-content: center;
                 align-items: center;
 
+                max-width: 400px;
+
                 @media (max-width:1440px) {
                     font-size: 16px;
+                }
+
+                @media (max-width:991px) {
+                    font-size: 24px;
+                    @include adaptiveValue(font-size, 24px, 16px);
+                    text-align: left;
+                }
+
+                .dc {
+                   
+                    
+
+                    &-1 {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 80px;
+                        height: fit-content;
+                    }
+
+                    &-2-mobile {
+                        display: none;
+                        @media (max-width:991px) {
+                            display: flex;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            width: 105px;
+                            height: 80px;
+                            
+                        }
+                    }
                 }
             }
 
@@ -226,3 +298,68 @@
         }
     }
 }
+
+
+
+.highlight__wrapper {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "highlight-row__block-1 highlight-row__block-1 highlight-row__block-2 highlight-row__block-3 highlight-row__block-3 highlight-row__block-3 highlight-row__block-4 highlight-row__block-4 highlight-row__block-4"
+    "highlight-row__block-5 highlight-row__block-5 highlight-row__block-6 highlight-row__block-7 highlight-row__block-7 highlight-row__block-8 highlight-row__block-8 highlight-row__block-8 highlight-row__block-8"
+    "highlight-row__block-9 highlight-row__block-9 highlight-row__block-10 highlight-row__block-11 highlight-row__block-11 highlight-row__block-11 highlight-row__block-11 highlight-row__block-12 highlight-row__block-12";
+
+
+    @media (max-width:991px) {
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+            "highlight-row__block-1 highlight-row__block-1"
+            "highlight-row__block-2 highlight-row__block-2"
+            "highlight-row__block-2 highlight-row__block-2"
+            "highlight-row__block-2 highlight-row__block-2"
+            "highlight-row__block-3 highlight-row__block-3"
+            "highlight-row__block-4 highlight-row__block-6"
+            "highlight-row__block-5 highlight-row__block-5"
+            "highlight-row__block-8 highlight-row__block-8"
+            "highlight-row__block-8 highlight-row__block-8"
+            "highlight-row__block-8 highlight-row__block-8"
+            "highlight-row__block-7 highlight-row__block-7"
+            "highlight-row__block-9 highlight-row__block-9"
+            "highlight-row__block-10 highlight-row__block-10"
+            "highlight-row__block-10 highlight-row__block-10"
+            "highlight-row__block-10 highlight-row__block-10"
+            "highlight-row__block-12 highlight-row__block-12"
+            "highlight-row__block-11 highlight-row__block-11"; 
+    }
+}
+
+.highlight-row__block-2 { grid-area: highlight-row__block-2; }
+
+.highlight-row__block-1 { grid-area: highlight-row__block-1; }
+
+.highlight-row__block-3 { grid-area: highlight-row__block-3; }
+
+.highlight-row__block-4 { grid-area: highlight-row__block-4; }
+
+.highlight-row__block-5 { grid-area: highlight-row__block-5; }
+
+.highlight-row__block-6 { grid-area: highlight-row__block-6; }
+
+.highlight-row__block-7 { grid-area: highlight-row__block-7; }
+
+.highlight-row__block-8 { grid-area: highlight-row__block-8; }
+
+.highlight-row__block-9 { grid-area: highlight-row__block-9; }
+
+.highlight-row__block-10 { grid-area: highlight-row__block-10; }
+
+.highlight-row__block-11 { grid-area: highlight-row__block-11; }
+
+.highlight-row__block-12 { grid-area: highlight-row__block-12; }
