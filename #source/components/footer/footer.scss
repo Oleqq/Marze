@@ -182,6 +182,14 @@
                 color: #000;    
 
                 text-decoration: none;
+
+                transition: .2s ease;
+
+                    &:hover {
+                        transition: .2s ease;
+                        color: #FF7700;
+                        text-shadow: 1px 1px 10px #ff770071;
+                    }
             }
         }    
         
@@ -205,6 +213,14 @@
                 color: #000;    
 
                 text-decoration: none;
+
+                transition: .2s ease;
+
+                &:hover {
+                    transition: .2s ease;
+                    color: #FF7700;
+                    text-shadow: 1px 1px 10px #ff770071;
+                }
             }
         }    
     } 
@@ -222,6 +238,38 @@
                 width: 100%;
                 height: 250px;
                 object-fit: cover;
+            }
+        }
+    }
+
+
+
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+
+        padding-top: 42px;
+        @include adaptiveValue(padding-top, 42px, 20px, 1920px, 467px);
+        padding-bottom: 34px;
+        @include adaptiveValue(padding-bottom, 34px, 24px, 1920px, 467px);
+        padding-left: 50px;
+        @include adaptiveValue(padding-left, 50px, 8px, 1920px, 467px);
+        padding-right: 50px;
+        @include adaptiveValue(padding-right, 50px, 8px, 1920px, 467px); 
+
+        border: 1px solid #cacaca;
+
+        border-top: none;
+
+        a {
+            text-decoration: none;
+
+            transition: .2s ease;
+
+            &:hover {
+                transition: .2s ease;
+                color: #FF7700;
+                text-shadow: 1px 1px 10px #ff770036;
             }
         }
     }

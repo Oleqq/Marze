@@ -35,6 +35,8 @@
 
         h3 {
             margin-bottom: 24px;
+            line-height: 100%;
+            max-width: 460px;
 
             @media (max-width:676px) {
                 font-weight: 500;

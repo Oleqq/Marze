@@ -24,7 +24,9 @@
        
 
         &.paragraph__subtitle {
-            
+            @media (max-width:567px) {
+                font-weight: 400;
+            }
         }
     }
 
@@ -84,6 +86,8 @@
 
                 &.paragraph__subtitle {
                     margin-bottom: 40px;
+
+                    
 
                     &-secondary {
                         display: flex;

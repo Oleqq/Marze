@@ -94,6 +94,17 @@
                     gap: 8px;
                     width: 100%;
                 }
+                &-title {
+
+                    @media (max-width:390px) {
+                        font-size: 16px;
+                    }
+                }
+                &-price {
+                    @media (max-width:390px) {
+                        font-size: 16px;
+                    }
+                }
             }
         }
 

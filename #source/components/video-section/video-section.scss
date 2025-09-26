@@ -63,6 +63,11 @@
         h2 {
             margin-bottom: 32px;
             @include adaptiveValue(margin-bottom, 32px, 18px, 1920px, 375px);
+
+            @media (max-width:567px) {
+                font-weight: 500;
+                line-height: 100%;
+            }
         }
 
         p {
@@ -74,6 +79,12 @@
             color: #000;
             margin-bottom: 16px;
             @include adaptiveValue(margin-bottom, 16px, 10px, 1920px, 467px);
+
+            max-width: 540px;
+
+            @media (max-width:567px) {
+                font-size: 14px;
+            }
         }
     }
 }

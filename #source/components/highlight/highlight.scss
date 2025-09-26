@@ -26,11 +26,18 @@
             @media (max-width:991px) {
                 font-weight: 500;
             }
+            @media (max-width:467px) {
+                line-height: normal;
+            }
         }
 
         p {
             max-width: 350px;
             line-height: 144%;
+
+            @media (max-width:467px) {
+                font-weight: 400;
+            }
         }
     }
     &__wrapper {

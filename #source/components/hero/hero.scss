@@ -144,6 +144,10 @@
                         @include adaptiveValue(padding-left, 42px, 8px, 1920px, 467px);
                         @include adaptiveValue(padding-bottom, 42px, 8px, 1920px, 467px);
 
+                        @media (max-width:467px) {
+                            padding-bottom: 40px;
+                        }
+
 
                         p {
                             color: #fff;

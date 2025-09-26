@@ -227,9 +227,13 @@ header {
 
             transition: .5s ease;
 
-        @media (max-width:991px) {
-            padding: 4px 8px;
-        }
+            &.orange {
+                background-color: #FF7700;
+            }
+
+            @media (max-width:991px) {
+                padding: 4px 8px;
+            }
         
         .socials__logo {
             display: flex;
