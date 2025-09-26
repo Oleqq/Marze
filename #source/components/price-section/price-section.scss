@@ -54,8 +54,12 @@
                 gap: 32px;
                 @include adaptiveValue(gap, 32px, 16px, 1920px, 467px);
 
-                @media (max-width:767px) {
-                    flex-direction: column;
+                @media (max-width:991px) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+                @media (max-width:390px) {
+                    grid-template-columns: 1fr;
                 }
             }
 
