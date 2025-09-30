@@ -20,6 +20,17 @@
       text-align: center;
     }
 
+    &.text-left {
+      .button-text {
+        left: 36px;
+      }
+      &-2 {
+        .button-text {
+          left: 72px;
+        }
+      }
+    }
+
     .button {
       &-text {
         position: absolute;

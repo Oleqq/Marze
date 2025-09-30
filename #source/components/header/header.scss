@@ -98,7 +98,7 @@ header {
     .burger-menu {
         display: none;
 
-        @media (max-width:676px) {
+        @media (max-width:767px) {
             display: flex;
         }
     }
@@ -287,7 +287,7 @@ header {
         transition: .2s ease;
         height: 24px;
 
-        @media (max-width:676px) {
+        @media (max-width:767px) {
             display: none;
         }
     }
@@ -468,35 +468,35 @@ header {
         font-family: var(--font-family);
         font-weight: 500;
         font-size: 20px;
-        @include adaptiveValue(font-size, 28px, 24px, 676px, 375px);
+        @include adaptiveValue(font-size, 28px, 24px, 767px, 375px);
         color: #000;
 
         margin-bottom: 24px;
-        @include adaptiveValue(margin-bottom, 32px, 24px, 676px, 375px);
+        @include adaptiveValue(margin-bottom, 32px, 24px, 767px, 375px);
     }
     &__address {
         font-family: var(--font-family);
         font-weight: 400;
         font-size: 16px;
-        @include adaptiveValue(font-size, 24px, 16px, 676px, 375px);
+        @include adaptiveValue(font-size, 24px, 16px, 767px, 375px);
         line-height: 144%;
         color: #000;
 
         margin-bottom: 16px;
-        @include adaptiveValue(margin-bottom, 24px, 16px, 676px, 375px);
+        @include adaptiveValue(margin-bottom, 24px, 16px, 767px, 375px);
     }
     &__additional {
         font-family: var(--font-family);
         font-weight: 400;
         font-size: 14px;
-        @include adaptiveValue(font-size, 18px, 14px, 676px, 375px);
+        @include adaptiveValue(font-size, 18px, 14px, 767px, 375px);
         line-height: 129%;
         color: #000;
     }
 
     nav {
         margin-bottom: 56px;
-        @include adaptiveValue(margin-bottom, 62px, 42px, 676px, 375px);
+        @include adaptiveValue(margin-bottom, 62px, 42px, 767px, 375px);
 
         .header__logo {
             padding: 20px;

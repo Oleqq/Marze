@@ -139,19 +139,39 @@
 
                         height: 100%;
 
+                        cursor: pointer;
+
                         @include adaptiveValue(padding-top, 42px, 8px, 1920px, 467px);
                         @include adaptiveValue(padding-right, 42px, 8px, 1920px, 467px);
                         @include adaptiveValue(padding-left, 42px, 8px, 1920px, 467px);
                         @include adaptiveValue(padding-bottom, 42px, 8px, 1920px, 467px);
 
+                        transition: .2s ease;
+
                         @media (max-width:467px) {
                             padding-bottom: 40px;
                         }
 
+                        &:hover {
+                            transition: .2s ease;
+
+
+                            .next-btn {
+                                border-color: #FF7700;
+                                background-color: #FF7700;
+                            }
+
+                            p {
+                                transition: .2s ease;
+                                
+                            }
+                        }
 
                         p {
                             color: #fff;
                             z-index: 10;
+                            transition: .2s ease;
+                            
                         }
 
                         .next-btn {
@@ -167,6 +187,10 @@
                             border-radius: 70px;
 
                             width: fit-content;
+
+                            cursor: pointer;
+
+                            transition: .2s ease;
                         }
 
                         img {

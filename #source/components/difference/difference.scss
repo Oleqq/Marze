@@ -93,6 +93,12 @@
         @media (max-width:1200px) {
             max-width: 100%;
         }
+        @media (max-width:1099px) {
+            max-width: 50%;
+        }
+        @media (max-width:567px) {
+            max-width: 100%;
+        }
 
         ul {
             display: flex;

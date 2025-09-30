@@ -5,6 +5,7 @@
     &__top {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         @include adaptiveValue(padding-top, 50px, 8px, 1920px, 467px);
         @include adaptiveValue(padding-right, 32px, 8px, 1920px, 467px);
@@ -370,3 +371,62 @@
 .highlight-row__block-11 { grid-area: highlight-row__block-11; }
 
 .highlight-row__block-12 { grid-area: highlight-row__block-12; }
+
+
+
+
+
+
+@media (min-width:992px) {
+	.highlight-row__block-4, 	
+    .highlight-row__block-6, 
+	.highlight-row__block-12 {
+		background-color: #F7F7F7;	
+	}
+}
+@media (max-width:991px) {
+	.highlight-row__block-5 {
+        background-color: #F7F7F7 !important;
+         
+        p {
+            color: #000 !important;
+        }
+    }
+
+    .highlight-row__block-11 {
+        
+    }
+
+    .highlight-row__block-6 {
+        background-color: #323232;
+
+        p {
+            color: #fff;
+        }
+    }
+    .highlight-row__block-7 {
+        background-color: #323232;
+
+        p {
+            color: #fff;
+        }
+    }
+
+    .highlight-row__block-12 {
+        background-color: #323232;
+
+        p {
+            color: #fff;
+        }
+    }
+    .highlight-row__block-11 {
+        background-color: #F7F7F7 !important;
+         
+        p {
+            color: #000 !important;
+        }
+    }
+
+    
+	
+}
